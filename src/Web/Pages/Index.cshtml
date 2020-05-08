@@ -1,0 +1,41 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <div>
+        <h3>New Pet</h3>
+        <div>
+            <label>Name</label>
+            <input id="inputName" maxlength="100" />
+        </div>
+        <div>
+            <label>Age</label>
+            <input id="inputAge" />
+        </div>
+        <div>
+            <button  onclick=""></button>
+        </div>
+    </div>
+    <div>
+        <table border="1" cellpadding="2" cellspacing="2">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+            @foreach (var pet in Model.Pets)
+            {
+                <tr>
+                    <td>@pet.Id</td>
+                    <td>@pet.Name</td>
+                    <td>@pet.Age</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
